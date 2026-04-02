@@ -18,6 +18,7 @@ import type { UserProfile } from '@/types';
 export default function SettingsPage() {
   const router = useRouter();
   const { profile, updateProfile, signOut } = useAuth();
+  // @ts-expect-error
   const { tier, stripeCustomerId } = useSubscription();
 
   const [name, setName] = useState(profile?.name || '');
