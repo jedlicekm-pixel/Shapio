@@ -141,7 +141,9 @@ export default function DashboardPage() {
           {DASHBOARD.todayWorkout}
         </h2>
         {loadingPlan ? (
-          <Card variant="elevated" className="h-36 animate-shimmer" />
+          <Card variant="elevated" className="h-36 animate-shimmer">
+  <div></div>
+</Card>
         ) : (
           <TodayWorkoutCard
             workout={todayWorkout}
