@@ -122,7 +122,7 @@ DŮLEŽITÉ: Neposkytuj lékařské diagnózy ani léčebné postupy. Vždy dopo
     // Call OpenAI
     const completion = await openai.chat.completions.create({
       model,
-      messages,
+      messages: messages as any,
       temperature: 0.8,
       max_tokens: 500,
     });
